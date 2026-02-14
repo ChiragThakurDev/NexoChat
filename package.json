@@ -1,0 +1,22 @@
+{
+  "name": "nexochat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm install --prefix NexoChat-BackEnd && npm install --prefix NexoChat-FrontEnd && npm run build --prefix NexoChat-FrontEnd",
+    "start": "npm run start --prefix NexoChat-BackEnd "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChiragThakurDev/NexoChat.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ChiragThakurDev/NexoChat/issues"
+  },
+  "homepage": "https://github.com/ChiragThakurDev/NexoChat#readme"
+}

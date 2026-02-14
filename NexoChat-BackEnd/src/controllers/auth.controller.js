@@ -50,13 +50,12 @@ export const signup = async (req, res) => {
 };
 
 export const login = async (req, res) => {
-  if (req.method === 'POST') {
-    const { email, password } = req.body;
-  }
+  const { email, password } = req.body;
+
   try {
     const user = await User.findOne({ email });
     if (!user) {
-      res.status(400).json({
+      return res.status(400).json({
         message: "No User Found, Please Register ",
         success: false,
       });
@@ -119,7 +118,7 @@ export const updateProfile = async (req, res) => {
       },
       {
         new: true,
-      }
+      },
     );
     res.status(200).json(updatedUser);
   } catch (error) {

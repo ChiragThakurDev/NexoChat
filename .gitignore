@@ -26,3 +26,4 @@ dist-ssr
 #ignore
 NexoChat-BackEnd/.env
 NexoChat-BackEnd/src/.env
+NexoChat-BackEnd/.env
