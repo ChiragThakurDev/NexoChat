@@ -15,6 +15,7 @@ app.use(cookieParser());
 app.use(
   cors({
     origin: "https://nexo-chat-lac.vercel.app",
+     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   }),
 );
