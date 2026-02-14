@@ -11,12 +11,12 @@ import path from "path";
 dotenv.config();
 const port = process.env.PORT;
 const __dirname = path.resolve();
-
+const allowedOrigins = [process.env.Orgin];
 app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: allowedOrigins,
 
     credentials: true,
   }),
@@ -34,7 +34,7 @@ if (process.env.NODE_ENV === "production") {
     );
   });
 }
-server.listen(port,() => {
+server.listen(port || 3000, "0.0.0.0", () => {
   console.log(`Server is running on Port ${port}`);
   connectDB();
 });
