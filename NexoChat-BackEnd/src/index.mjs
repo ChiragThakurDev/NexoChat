@@ -8,15 +8,14 @@ import messageRoutes from "./routes/message.route.js";
 import cors from "cors";
 import { app, server } from "./lib/socket.js";
 import path from "path";
-dotenv.config();
-const Port = process.env.PORT || 3000;
+config();
+const PORT = process.env.PORT || 3000;
 const __dirname = path.resolve();
 
 app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-   
     origin: "http://localhost:5173",
 
     credentials: true,
@@ -31,7 +30,7 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.join(__dirname, "../NexoChat-FrontEnd/dist/index.html"));
   });
 }
-server.listen(3000, async () => {
-  console.log(`Server is running on Port ${3000}`);
+server.listen(PORT, async () => {
+  console.log(`Server is running on Port ${PORT}`);
   await connectDB();
 });
