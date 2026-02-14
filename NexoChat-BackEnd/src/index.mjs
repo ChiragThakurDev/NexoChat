@@ -25,9 +25,13 @@ app.use(
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "../NexoChat-FrontEnd/dist")));
+  app.use(
+    express.static(path.join(__dirname, "public", "../NexoChat-FrontEnd/dist")),
+  );
   app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../NexoChat-FrontEnd/dist/index.html"));
+    res.sendFile(
+      path.join(__dirname, "public", "../NexoChat-FrontEnd/dist/index.html"),
+    );
   });
 }
 server.listen(PORT, async () => {
