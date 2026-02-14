@@ -13,11 +13,11 @@
   "name": "nexochat-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "node src/index.mjs",
+  "main": "node src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "nodemon src/index.mjs",
-    "start": "node src/index.mjs"
+    "start:dev": "nodemon src/index.js",
+    "start": "node src/index.js"
   },
   "keywords": [],
   "author": "",
