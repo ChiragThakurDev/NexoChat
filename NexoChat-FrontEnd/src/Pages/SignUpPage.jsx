@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import { toast } from "react-hot-toast";
 import { Link } from "react-router-dom";
-import AuthImagePattern from "../Components/AuthimagePattern";
+import AuthImagePattern from "../Components/AuthImagePattern.jsx";
 
 const SignUpPage = () => {
   const [showPassword, setShowPassword] = useState(false);
