@@ -9,7 +9,7 @@ import cors from "cors";
 import { app, server } from "./lib/socket.js";
 import path from "path";
 dotenv.config();
-const PORT = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 const __dirname = path.resolve();
 
 app.use(express.json());
@@ -34,7 +34,7 @@ if (process.env.NODE_ENV === "production") {
     );
   });
 }
-server.listen(PORT, async () => {
-  console.log(`Server is running on Port ${PORT}`);
+server.listen(port, async () => {
+  console.log(`Server is running on Port ${port}`);
   await connectDB();
 });
