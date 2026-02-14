@@ -8,6 +8,7 @@ const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
     origin: "https://nexo-chat-lac.vercel.app",
+     methods: ["GET", "POST", "PUT", "DELETE"],
   },
 });
 export function getReceiverSocketId(userId) {
